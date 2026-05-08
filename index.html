@@ -9,10 +9,7 @@
     body { background:#f3f6fb; }
     .card { background:white; border-radius:18px; box-shadow:0 8px 24px rgba(15,23,42,.07); border:1px solid #e8edf5; }
     .navy { background:linear-gradient(90deg,#020617,#071b46,#020617); }
-    .green { color:#059669; }
-    .red { color:#dc2626; }
     .blue { color:#2563eb; }
-    .amber { color:#d97706; }
     .pill { border-radius:999px; padding:4px 10px; font-size:11px; font-weight:700; }
     a:hover { text-decoration:underline; }
   </style>
@@ -24,7 +21,6 @@
 
   <header class="navy text-white rounded-2xl p-5 shadow-2xl">
     <div class="grid gap-5 xl:grid-cols-[1.15fr_1fr_2.35fr] items-center">
-
       <div class="flex items-center gap-4">
         <div class="bg-white/10 rounded-2xl p-3 text-4xl">✈️</div>
         <div>
@@ -48,9 +44,11 @@
               { "proName": "FX:GBPUSD", "title": "GBP/USD" },
               { "proName": "FX:USDTRY", "title": "USD/TRY" },
               { "proName": "FX_IDC:EURTRY", "title": "EUR/TRY" },
+              { "proName": "BIST:XU100", "title": "BIST100" },
+              { "proName": "BIST:THYAO", "title": "THYAO" },
+              { "proName": "BIST:PGSUS", "title": "PGSUS" },
               { "proName": "TVC:UKOIL", "title": "Brent" },
-              { "proName": "TVC:USOIL", "title": "WTI" },
-              { "proName": "OANDA:XAUUSD", "title": "Gold" }
+              { "proName": "BINANCE:BTCUSDT", "title": "BTC" }
             ],
             "showSymbolLogo": true,
             "isTransparent": true,
@@ -61,15 +59,13 @@
           </script>
         </div>
       </div>
-
     </div>
   </header>
 
   <main class="grid gap-4 xl:grid-cols-[360px_1fr_410px]">
 
-    <section class="space-y-4">
-
-      <div class="card p-4">
+    <section class="space-y-4 xl:row-span-2">
+      <div class="card p-4 h-full">
         <h2 class="text-lg font-extrabold mb-3">📊 Canlı Piyasa Göstergeleri</h2>
         <div class="rounded-xl overflow-hidden border">
           <div class="tradingview-widget-container">
@@ -83,23 +79,38 @@
               "isTransparent": false,
               "showSymbolLogo": true,
               "width": "100%",
-              "height": "430",
+              "height": "820",
               "tabs": [
                 {
-                  "title": "FX",
+                  "title": "Markets",
                   "symbols": [
                     { "s": "FX:EURUSD", "d": "EUR/USD" },
                     { "s": "FX:GBPUSD", "d": "GBP/USD" },
                     { "s": "FX:USDTRY", "d": "USD/TRY" },
-                    { "s": "FX_IDC:EURTRY", "d": "EUR/TRY" }
+                    { "s": "FX_IDC:EURTRY", "d": "EUR/TRY" },
+                    { "s": "BIST:XU100", "d": "Borsa İstanbul" },
+                    { "s": "BIST:THYAO", "d": "THYAO" },
+                    { "s": "BIST:PGSUS", "d": "PGSUS" },
+                    { "s": "OANDA:XAUUSD", "d": "Altın" },
+                    { "s": "OANDA:XAGUSD", "d": "Gümüş" }
                   ]
                 },
                 {
                   "title": "Energy",
                   "symbols": [
-                    { "s": "TVC:UKOIL", "d": "Brent" },
-                    { "s": "TVC:USOIL", "d": "WTI" },
-                    { "s": "OANDA:XAUUSD", "d": "Gold" }
+                    { "s": "TVC:UKOIL", "d": "Brent Oil" },
+                    { "s": "TVC:USOIL", "d": "WTI Oil" }
+                  ]
+                },
+                {
+                  "title": "Crypto",
+                  "symbols": [
+                    { "s": "BINANCE:BTCUSDT", "d": "BTC" },
+                    { "s": "BINANCE:ETHUSDT", "d": "ETH" },
+                    { "s": "BINANCE:SOLUSDT", "d": "SOL" },
+                    { "s": "BINANCE:BNBUSDT", "d": "BNB" },
+                    { "s": "BINANCE:XRPUSDT", "d": "XRP" },
+                    { "s": "BINANCE:ADAUSDT", "d": "ADA" }
                   ]
                 }
               ]
@@ -109,209 +120,80 @@
         </div>
         <p class="text-xs text-slate-500 mt-3">Data: TradingView widget. Platts/CIF NWE doğrudan ücretsiz değildir.</p>
       </div>
-
-      <div class="card p-4">
-        <h2 class="text-lg font-extrabold mb-3">🏦 Türkiye Ekonomisi</h2>
-        <p class="text-xs text-slate-500 mb-3">Kaynak: TCMB, TÜİK, Reuters / resmi açıklamalar.</p>
-        <div class="space-y-3 text-sm">
-          <a href="https://www.tcmb.gov.tr/wps/wcm/connect/en/tcmb+en/main+menu/core+functions/monetary+policy/central+bank+interest+rates" target="_blank" class="grid grid-cols-[1fr_auto] gap-3 border-b pb-2">
-            <span><b>TCMB Politika Faizi</b><p class="text-xs text-slate-400">1 hafta repo</p></span><b>37.00%</b>
-          </a>
-          <a href="https://www.tcmb.gov.tr/wps/wcm/connect/en/tcmb+en/main+menu/core+functions/monetary+policy/central+bank+interest+rates" target="_blank" class="grid grid-cols-[1fr_auto] gap-3 border-b pb-2">
-            <span><b>O/N Borç Verme</b><p class="text-xs text-slate-400">TCMB gecelik lending</p></span><b>40.00%</b>
-          </a>
-          <a href="https://www.tcmb.gov.tr/wps/wcm/connect/en/tcmb+en/main+menu/core+functions/monetary+policy/central+bank+interest+rates" target="_blank" class="grid grid-cols-[1fr_auto] gap-3 border-b pb-2">
-            <span><b>O/N Borç Alma</b><p class="text-xs text-slate-400">TCMB gecelik borrowing</p></span><b>35.50%</b>
-          </a>
-          <a href="https://data.tuik.gov.tr/" target="_blank" class="grid grid-cols-[1fr_auto] gap-3 border-b pb-2">
-            <span><b>TÜFE Yıllık</b><p class="text-xs text-slate-400">TÜİK güncel CPI</p></span><b>Güncel Veri</b>
-          </a>
-          <a href="https://data.tuik.gov.tr/" target="_blank" class="grid grid-cols-[1fr_auto] gap-3 border-b pb-2">
-            <span><b>TÜFE Aylık</b><p class="text-xs text-slate-400">TÜİK güncel CPI</p></span><b>Güncel Veri</b>
-          </a>
-          <a href="https://www.bloomberght.com/" target="_blank" class="grid grid-cols-[1fr_auto] gap-3">
-            <span><b>Piyasa Gündemi</b><p class="text-xs text-slate-400">Faiz, kur, enflasyon, CDS</p></span><b>BloombergHT</b>
-          </a>
-        </div>
-      </div>
-
     </section>
 
-    <section class="space-y-4">
-
-      <div class="card p-5">
-        <h2 class="text-xl font-extrabold mb-1">Günün Özeti – 5 Ana Başlık</h2>
-        <p class="text-xs text-slate-500 mb-4">Her açılışta ücretsiz kaynaklardan haber denenir; kaynak cevap vermezse güvenilir ana link gösterilir.</p>
-
-        <div id="dailyBrief" class="space-y-3 text-sm">
-          <p class="text-slate-500">Günün başlıkları yükleniyor...</p>
-        </div>
-
-        <div class="mt-5 rounded-2xl border bg-amber-50 p-4">
-          <h3 class="text-lg font-extrabold mb-3 text-amber-700">📌 Bugün Takip Et</h3>
-          <div id="todayWatch" class="space-y-3 text-sm">
-            <a href="https://www.forexfactory.com/calendar" target="_blank" class="block hover:text-blue-700">• ForexFactory ekonomik takvim: Fed, ECB, PMI, CPI, NFP ve piyasa saatleri</a>
-            <a href="https://www.bloomberght.com/" target="_blank" class="block hover:text-blue-700">• Türkiye piyasası: faiz, kur, enflasyon ve gün içi ekonomi başlıkları</a>
-            <a href="https://www.iea.org/reports" target="_blank" class="block hover:text-blue-700">• Petrol & enerji: Brent seviyesi, IEA raporları ve enerji görünümü</a>
-            <a href="https://investor.turkishairlines.com/" target="_blank" class="block hover:text-blue-700">• THY yatırımcı ilişkileri: finansal sonuçlar, trafik verileri ve duyurular</a>
-            <a href="https://www.reuters.com/world/middle-east/" target="_blank" class="block hover:text-blue-700">• Middle East risk: hava sahası, savaş riski, operasyonel belirsizlik</a>
-          </div>
-        </div>
+    <section class="card p-5">
+      <h2 class="text-xl font-extrabold mb-1">Günün Özeti – 5 Ana Başlık</h2>
+      <p class="text-xs text-slate-500 mb-4">Her açılışta ücretsiz kaynaklardan haber denenir; kaynak cevap vermezse güvenilir ana link gösterilir.</p>
+      <div id="dailyBrief" class="space-y-3 text-sm">
+        <p class="text-slate-500">Günün başlıkları yükleniyor...</p>
       </div>
-
-      <div class="card p-5">
-        <h2 class="text-xl font-extrabold mb-4">📰 Sektör Haberleri</h2>
-
-        <div class="space-y-5">
-
-          <div>
-            <h3 class="font-extrabold text-blue-700 mb-3">Türkiye & Bölge</h3>
-            <div class="grid gap-3 md:grid-cols-2 text-sm">
-              <a href="https://investor.turkishairlines.com/" target="_blank" class="block rounded-2xl border p-4 hover:shadow-md">
-                <b>THY IR</b><p class="text-slate-600 mt-1">Finansal sonuçlar, trafik verileri ve yatırımcı duyuruları.</p><span class="blue font-bold">Aç →</span>
-              </a>
-              <a href="https://www.sunexpress.com/tr/haberler/" target="_blank" class="block rounded-2xl border p-4 hover:shadow-md">
-                <b>SunExpress</b><p class="text-slate-600 mt-1">Türkiye-Almanya hattı, kapasite ve şirket haberleri.</p><span class="blue font-bold">Aç →</span>
-              </a>
-              <a href="https://www.haberturk.com/ekonomi" target="_blank" class="block rounded-2xl border p-4 hover:shadow-md">
-                <b>Haber Türk Ekonomi</b><p class="text-slate-600 mt-1">Türkiye ekonomi, faiz, kur ve piyasa haberleri.</p><span class="blue font-bold">Aç →</span>
-              </a>
-              <a href="https://www.bloomberght.com/" target="_blank" class="block rounded-2xl border p-4 hover:shadow-md">
-                <b>Bloomberg HT</b><p class="text-slate-600 mt-1">Piyasa, ekonomi, finans ve son dakika haberleri.</p><span class="blue font-bold">Aç →</span>
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <h3 class="font-extrabold text-blue-700 mb-3">Global Airline</h3>
-            <div class="grid gap-3 md:grid-cols-2 text-sm">
-              <a href="https://theaircurrent.com/" target="_blank" class="block rounded-2xl border p-4 hover:shadow-md">
-                <b>The Air Current</b><p class="text-slate-600 mt-1">Lessor, OEM, MRO ve aviation market analizleri.</p><span class="blue font-bold">Aç →</span>
-              </a>
-              <a href="https://www.cirium.com/thoughtcloud/" target="_blank" class="block rounded-2xl border p-4 hover:shadow-md">
-                <b>Cirium</b><p class="text-slate-600 mt-1">Kapasite, iptal, uçuş ve havacılık veri analizleri.</p><span class="blue font-bold">Aç →</span>
-              </a>
-              <a href="https://skift.com/airline-weekly/" target="_blank" class="block rounded-2xl border p-4 hover:shadow-md">
-                <b>Skift Airline Weekly</b><p class="text-slate-600 mt-1">Airline strategy, demand, network ve financial insight.</p><span class="blue font-bold">Aç →</span>
-              </a>
-              <a href="https://centreforaviation.com/" target="_blank" class="block rounded-2xl border p-4 hover:shadow-md">
-                <b>CAPA Centre for Aviation</b><p class="text-slate-600 mt-1">Global airline, airport, network ve aviation intelligence.</p><span class="blue font-bold">Aç →</span>
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <h3 class="font-extrabold text-blue-700 mb-3">Fuel & Energy</h3>
-            <div class="grid gap-3 md:grid-cols-2 text-sm">
-              <a href="https://www.spglobal.com/commodityinsights/en" target="_blank" class="block rounded-2xl border p-4 hover:shadow-md">
-                <b>Platts JET</b><p class="text-slate-600 mt-1">Jet fuel, Platts, commodity insights ve enerji piyasaları.</p><span class="blue font-bold">Aç →</span>
-              </a>
-              <a href="https://www.iea.org/reports" target="_blank" class="block rounded-2xl border p-4 hover:shadow-md">
-                <b>IEA Oil Market Report</b><p class="text-slate-600 mt-1">Petrol, enerji talebi, arz ve piyasa raporları.</p><span class="blue font-bold">Aç →</span>
-              </a>
-              <a href="https://theicct.org/aviation/" target="_blank" class="block rounded-2xl border p-4 hover:shadow-md">
-                <b>ICCT Aviation</b><p class="text-slate-600 mt-1">Aviation fuel, emissions, SAF ve çevresel regülasyonlar.</p><span class="blue font-bold">Aç →</span>
-              </a>
-              <a href="https://www.tradingview.com/symbols/TVC-UKOIL/" target="_blank" class="block rounded-2xl border p-4 hover:shadow-md">
-                <b>Brent Chart</b><p class="text-slate-600 mt-1">Brent canlı grafik ve teknik seviye takibi.</p><span class="blue font-bold">Aç →</span>
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <h3 class="font-extrabold text-blue-700 mb-3">Middle East & Risk</h3>
-            <div class="grid gap-3 md:grid-cols-2 text-sm">
-              <a href="https://www.reuters.com/world/middle-east/" target="_blank" class="block rounded-2xl border p-4 hover:shadow-md">
-                <b>Reuters Middle East</b><p class="text-slate-600 mt-1">Jeopolitik risk, bölgesel çatışma ve son dakika gelişmeleri.</p><span class="blue font-bold">Aç →</span>
-              </a>
-              <a href="https://www.lloydslist.com/" target="_blank" class="block rounded-2xl border p-4 hover:shadow-md">
-                <b>Lloyd's Intelligence</b><p class="text-slate-600 mt-1">Denizcilik, savaş riski, ticaret rotaları ve sigorta bağlantılı riskler.</p><span class="blue font-bold">Aç →</span>
-              </a>
-              <a href="https://worldview.stratfor.com/" target="_blank" class="block rounded-2xl border p-4 hover:shadow-md">
-                <b>Stratfor</b><p class="text-slate-600 mt-1">Jeopolitik analiz, risk haritası ve bölgesel görünüm.</p><span class="blue font-bold">Aç →</span>
-              </a>
-              <a href="https://www.iata.org/en/programs/safety/" target="_blank" class="block rounded-2xl border p-4 hover:shadow-md">
-                <b>IATA Safety</b><p class="text-slate-600 mt-1">Operational safety, risk awareness ve havacılık güvenliği.</p><span class="blue font-bold">Aç →</span>
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <h3 class="font-extrabold text-blue-700 mb-3">Lessor / Finance</h3>
-            <div class="grid gap-3 md:grid-cols-2 text-sm">
-              <a href="https://www.airfinancejournal.com/" target="_blank" class="block rounded-2xl border p-4 hover:shadow-md">
-                <b>Air Finance Journal</b><p class="text-slate-600 mt-1">Aircraft finance, lessor, leasing ve aviation capital market.</p><span class="blue font-bold">Aç →</span>
-              </a>
-              <a href="https://aviationweek.com/fleet-aerospace" target="_blank" class="block rounded-2xl border p-4 hover:shadow-md">
-                <b>Aviation Week Fleet</b><p class="text-slate-600 mt-1">Fleet, aircraft market, OEM ve delivery pipeline haberleri.</p><span class="blue font-bold">Aç →</span>
-              </a>
-              <a href="https://www.flightglobal.com/fleets" target="_blank" class="block rounded-2xl border p-4 hover:shadow-md">
-                <b>FlightGlobal Fleets</b><p class="text-slate-600 mt-1">Fleet strategy, aircraft availability ve global fleet data haberleri.</p><span class="blue font-bold">Aç →</span>
-              </a>
-              <a href="https://www.aviationnews-online.com/airline-economics" target="_blank" class="block rounded-2xl border p-4 hover:shadow-md">
-                <b>Airline Economics</b><p class="text-slate-600 mt-1">Leasing, finance, lessor ve airline economics haberleri.</p><span class="blue font-bold">Aç →</span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
     </section>
 
-    <section class="space-y-4">
-
-      <div class="card p-4">
-        <h2 class="text-lg font-extrabold mb-3">📌 Öne Çıkan İzleme Listesi</h2>
-
-        <a href="https://www.aviationnews-online.com/airline-economics" target="_blank" class="block border rounded-2xl p-3 mb-3 hover:shadow-md">
-          <div class="flex justify-between"><b>Lessor Haberleri</b><span class="pill bg-emerald-100 text-emerald-700">YENİ</span></div>
-          <p class="text-sm text-slate-600 mt-1">Airline Economics üzerinden aircraft finance, leasing, lessor ve aviation capital market gündemi.</p>
-        </a>
-
-        <a href="https://www.lloyds.com/news-and-insights" target="_blank" class="block border rounded-2xl p-3 mb-3 hover:shadow-md">
-          <div class="flex justify-between"><b>Insurance / War Risk</b><span class="pill bg-orange-100 text-orange-700">DİKKAT</span></div>
-          <p class="text-sm text-slate-600 mt-1">Lloyd's news, market insight, specialty insurance ve aviation/war-risk bağlantılı gelişmeler.</p>
-        </a>
-
-        <a href="https://www.wtwco.com/en-gb/insights?industries=aviation" target="_blank" class="block border rounded-2xl p-3 mb-3 hover:shadow-md">
-          <div class="flex justify-between"><b>Aviation Insurance Brokers</b><span class="pill bg-orange-100 text-orange-700">TAKİP</span></div>
-          <p class="text-sm text-slate-600 mt-1">WTW aviation insights; broker market görüşleri ve havacılık sigortası içerikleri.</p>
-        </a>
-
-        <a href="https://www.gallagherspecialty.com/industries/aerospace" target="_blank" class="block border rounded-2xl p-3 mb-3 hover:shadow-md">
-          <div class="flex justify-between"><b>Gallagher Aerospace</b><span class="pill bg-orange-100 text-orange-700">TAKİP</span></div>
-          <p class="text-sm text-slate-600 mt-1">Aerospace insurance market, broker insight ve risk değerlendirmeleri.</p>
-        </a>
-
-        <a href="https://aviationweek.com/fleet-aerospace" target="_blank" class="block border rounded-2xl p-3 mb-3 hover:shadow-md">
-          <div class="flex justify-between"><b>Aircraft Leasing / Fleet</b><span class="pill bg-emerald-100 text-emerald-700">YENİ</span></div>
-          <p class="text-sm text-slate-600 mt-1">Aircraft, fleet, OEM delivery, availability ve aircraft market developments.</p>
-        </a>
-
-        <a href="https://aviationweek.com/mro" target="_blank" class="block border rounded-2xl p-3 hover:shadow-md">
-          <div class="flex justify-between"><b>MRO & Tedarik Zinciri</b><span class="pill bg-orange-100 text-orange-700">İZLE</span></div>
-          <p class="text-sm text-slate-600 mt-1">MRO Network, maintenance, engine shop visit, aftermarket ve supply chain haberleri.</p>
-        </a>
+    <section class="card p-5">
+      <h2 class="text-xl font-extrabold mb-3 text-amber-700">📌 Bugün Takip Et</h2>
+      <div class="space-y-3 text-sm">
+        <a href="https://www.forexfactory.com/calendar" target="_blank" class="block rounded-xl border p-3 hover:bg-amber-50">• ForexFactory ekonomik takvim: Fed, ECB, PMI, CPI, NFP ve piyasa saatleri</a>
+        <a href="https://www.bloomberght.com/" target="_blank" class="block rounded-xl border p-3 hover:bg-amber-50">• Türkiye piyasası: faiz, kur, enflasyon ve ekonomi başlıkları</a>
+        <a href="https://www.tradingview.com/symbols/TVC-UKOIL/" target="_blank" class="block rounded-xl border p-3 hover:bg-amber-50">• Brent seviyesi ve teknik eşikler</a>
+        <a href="https://investor.turkishairlines.com/" target="_blank" class="block rounded-xl border p-3 hover:bg-amber-50">• THY yatırımcı ilişkileri: finansal sonuçlar, trafik verileri ve duyurular</a>
+        <a href="https://www.reuters.com/world/middle-east/" target="_blank" class="block rounded-xl border p-3 hover:bg-amber-50">• Middle East risk: hava sahası, savaş riski, operasyonel belirsizlik</a>
       </div>
+    </section>
 
-      <div class="card p-4">
-        <h2 class="text-lg font-extrabold mb-3">📄 IATA & Sektör Raporları</h2>
-        <a href="https://www.iata.org/en/publications/economics/" target="_blank" class="flex justify-between border-b py-3"><b>IATA Economics Report</b><span class="text-slate-500">Güncel</span></a>
-        <a href="https://www.iata.org/en/publications/economics/" target="_blank" class="flex justify-between border-b py-3"><b>IATA Chart of the Week</b><span class="text-slate-500">Haftalık</span></a>
-        <a href="https://www.iata.org/en/pressroom/" target="_blank" class="flex justify-between border-b py-3"><b>Global Passenger Demand</b><span class="text-slate-500">Basın</span></a>
-        <a href="https://www.iata.org/en/publications/economics/" target="_blank" class="flex justify-between py-3"><b>Financial Monitor</b><span class="text-slate-500">Güncel</span></a>
+    <section class="card p-5 xl:col-span-2">
+      <h2 class="text-xl font-extrabold mb-5">📰 Sektör Haberleri</h2>
+
+      <div class="space-y-6">
+
+        <div>
+          <h3 class="font-extrabold text-blue-700 mb-3">Türkiye & Bölge</h3>
+          <div class="grid gap-3 md:grid-cols-3 text-sm">
+            <a href="https://investor.turkishairlines.com/" target="_blank" class="block rounded-2xl border p-3 hover:shadow-md"><b>THY IR</b><p class="text-slate-600 mt-1">Finansal sonuçlar, trafik verileri ve yatırımcı duyuruları.</p><span class="blue font-bold">Aç →</span></a>
+            <a href="https://www.sunexpress.com/tr/haberler/" target="_blank" class="block rounded-2xl border p-3 hover:shadow-md"><b>SunExpress</b><p class="text-slate-600 mt-1">Türkiye-Almanya hattı, kapasite ve şirket haberleri.</p><span class="blue font-bold">Aç →</span></a>
+            <a href="https://www.haberturk.com/ekonomi" target="_blank" class="block rounded-2xl border p-3 hover:shadow-md"><b>Haber Türk Ekonomi</b><p class="text-slate-600 mt-1">Türkiye ekonomi, faiz, kur ve piyasa haberleri.</p><span class="blue font-bold">Aç →</span></a>
+            <a href="https://www.bloomberght.com/" target="_blank" class="block rounded-2xl border p-3 hover:shadow-md"><b>Bloomberg HT</b><p class="text-slate-600 mt-1">Piyasa, ekonomi, finans ve son dakika haberleri.</p><span class="blue font-bold">Aç →</span></a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-extrabold text-blue-700 mb-3">Global Airline</h3>
+          <div class="grid gap-3 md:grid-cols-3 text-sm">
+            <a href="https://theaircurrent.com/" target="_blank" class="block rounded-2xl border p-3 hover:shadow-md"><b>The Air Current</b><p class="text-slate-600 mt-1">Lessor, OEM, MRO ve aviation market analizleri.</p><span class="blue font-bold">Aç →</span></a>
+            <a href="https://www.cirium.com/news/" target="_blank" class="block rounded-2xl border p-3 hover:shadow-md"><b>Cirium</b><p class="text-slate-600 mt-1">Kapasite, iptal, uçuş ve havacılık veri analizleri.</p><span class="blue font-bold">Aç →</span></a>
+            <a href="https://skift.com/airline-weekly/" target="_blank" class="block rounded-2xl border p-3 hover:shadow-md"><b>Skift Airline Weekly</b><p class="text-slate-600 mt-1">Airline strategy, demand, network ve financial insight.</p><span class="blue font-bold">Aç →</span></a>
+            <a href="https://centreforaviation.com/" target="_blank" class="block rounded-2xl border p-3 hover:shadow-md"><b>CAPA Centre for Aviation</b><p class="text-slate-600 mt-1">Global airline, airport, network ve aviation intelligence.</p><span class="blue font-bold">Aç →</span></a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-extrabold text-blue-700 mb-3">Fuel & Energy</h3>
+          <div class="grid gap-3 md:grid-cols-3 text-sm">
+            <a href="https://www.spglobal.com/commodityinsights/en" target="_blank" class="block rounded-2xl border p-3 hover:shadow-md"><b>Platts JET</b><p class="text-slate-600 mt-1">Jet fuel, Platts, commodity insights ve enerji piyasaları.</p><span class="blue font-bold">Aç →</span></a>
+            <a href="https://www.iea.org/reports" target="_blank" class="block rounded-2xl border p-3 hover:shadow-md"><b>IEA Oil Market Report</b><p class="text-slate-600 mt-1">Petrol, enerji talebi, arz ve piyasa raporları.</p><span class="blue font-bold">Aç →</span></a>
+            <a href="https://theicct.org/aviation/" target="_blank" class="block rounded-2xl border p-3 hover:shadow-md"><b>ICCT Aviation</b><p class="text-slate-600 mt-1">Aviation fuel, emissions, SAF ve çevresel regülasyonlar.</p><span class="blue font-bold">Aç →</span></a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-extrabold text-blue-700 mb-3">Middle East & Risk</h3>
+          <div class="grid gap-3 md:grid-cols-3 text-sm">
+            <a href="https://www.reuters.com/world/middle-east/" target="_blank" class="block rounded-2xl border p-3 hover:shadow-md"><b>Reuters Middle East</b><p class="text-slate-600 mt-1">Jeopolitik risk, bölgesel çatışma ve son dakika gelişmeleri.</p><span class="blue font-bold">Aç →</span></a>
+            <a href="https://www.lloydslist.com/" target="_blank" class="block rounded-2xl border p-3 hover:shadow-md"><b>Lloyd's Intelligence</b><p class="text-slate-600 mt-1">Ticaret rotaları, savaş riski ve denizcilik bağlantılı riskler.</p><span class="blue font-bold">Aç →</span></a>
+            <a href="https://worldview.stratfor.com/" target="_blank" class="block rounded-2xl border p-3 hover:shadow-md"><b>Stratfor</b><p class="text-slate-600 mt-1">Jeopolitik analiz, risk haritası ve bölgesel görünüm.</p><span class="blue font-bold">Aç →</span></a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-extrabold text-blue-700 mb-3">Lessor / Finance</h3>
+          <div class="grid gap-3 md:grid-cols-3 text-sm">
+            <a href="https://www.airfinancejournal.com/" target="_blank" class="block rounded-2xl border p-3 hover:shadow-md"><b>Air Finance Journal</b><p class="text-slate-600 mt-1">Aircraft finance, lessor, leasing ve aviation capital market.</p><span class="blue font-bold">Aç →</span></a>
+            <a href="https://aviationweek.com/fleet-aerospace" target="_blank" class="block rounded-2xl border p-3 hover:shadow-md"><b>Aviation Week Fleet</b><p class="text-slate-600 mt-1">Fleet, aircraft market, OEM ve delivery pipeline haberleri.</p><span class="blue font-bold">Aç →</span></a>
+            <a href="https://www.flightglobal.com/fleets" target="_blank" class="block rounded-2xl border p-3 hover:shadow-md"><b>FlightGlobal Fleets</b><p class="text-slate-600 mt-1">Fleet strategy, aircraft availability ve global fleet data haberleri.</p><span class="blue font-bold">Aç →</span></a>
+          </div>
+        </div>
+
       </div>
-
-      <div class="card p-5 bg-emerald-50 border-emerald-200">
-        <h2 class="text-lg font-extrabold text-emerald-700 mb-4">✅ Günlük Aksiyon Notu</h2>
-        <p class="mb-3">✓ EUR/TRY ve USD/TRY açık pozisyon açısından canlı takip edilmeli.</p>
-        <p class="mb-3">✓ Brent/WTI hareketi yakıt maliyetine etkisi açısından izlenmeli.</p>
-        <p class="mb-3">✓ Middle East riskleri için MED/JED/BGW/DIA uçuşları takipte.</p>
-        <p class="mb-3">✓ IATA raporları supply chain açısından gözden geçirilmeli.</p>
-        <p><b>Bugün:</b> haftalık yakıt raporu ve kur pozisyonları kontrol edilmeli.</p>
-      </div>
-
     </section>
 
   </main>
