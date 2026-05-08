@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Morning Volkan</title>
+  <title>Good Morning</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { background:#f3f6fb; }
@@ -27,13 +27,13 @@
       <div class="flex items-center gap-4">
         <div class="bg-white/10 rounded-2xl p-3 text-4xl">✈️</div>
         <div>
-          <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">MORNING VOLKAN</h1>
+          <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">GOOD MORNING</h1>
           <p class="text-blue-100 text-sm md:text-base">Airline Finance & Market Intelligence</p>
         </div>
       </div>
 
       <div class="border-white/10 xl:border-l xl:pl-6">
-        <p class="font-bold">Günlük CFO Brief</p>
+        <p class="font-bold">Günlük Brief</p>
         <p class="text-xs text-blue-100">morningvolkan.vercel.app • Live Market</p>
       </div>
 
@@ -113,22 +113,26 @@
 
       <div class="card p-4">
         <h2 class="text-lg font-extrabold mb-3">🏦 Türkiye Ekonomisi</h2>
+        <p class="text-xs text-slate-500 mb-3">Kaynak: TCMB, TÜİK, Trading Economics / güncel resmi açıklamalar.</p>
         <div class="space-y-3 text-sm">
-          <div class="grid grid-cols-[1fr_auto_auto] gap-3 border-b pb-2"><b>TCMB Politika Faizi</b><b>50.00%</b><span class="text-slate-500">50.00%</span></div>
-          <div class="grid grid-cols-[1fr_auto_auto] gap-3 border-b pb-2"><b>TÜFE Yıllık</b><b>37.86%</b><span class="text-slate-500">38.10%</span></div>
-          <div class="grid grid-cols-[1fr_auto_auto] gap-3 border-b pb-2"><b>ÜFE Yıllık</b><b>22.50%</b><span class="text-slate-500">23.50%</span></div>
-          <div class="grid grid-cols-[1fr_auto_auto] gap-3 border-b pb-2"><b>Gecelik Borç Verme</b><b>53.00%</b><span class="text-slate-500">53.00%</span></div>
-          <div class="grid grid-cols-[1fr_auto_auto] gap-3"><b>5Y CDS Türkiye</b><b>284</b><span class="text-slate-500">279</span></div>
-        </div>
-      </div>
-
-      <div class="card p-4">
-        <h2 class="text-lg font-extrabold mb-3">⛽ Yakıt & Emtia Notu</h2>
-        <div class="space-y-3 text-sm">
-          <div class="grid grid-cols-[1fr_auto] gap-3 border-b pb-2"><div><b>Brent</b><p class="text-xs text-slate-400">TradingView / TVC:UKOIL</p></div><span class="red font-bold">Canlı widget</span></div>
-          <div class="grid grid-cols-[1fr_auto] gap-3 border-b pb-2"><div><b>WTI</b><p class="text-xs text-slate-400">TradingView / TVC:USOIL</p></div><span class="red font-bold">Canlı widget</span></div>
-          <div class="grid grid-cols-[1fr_auto] gap-3 border-b pb-2"><div><b>Jet Fuel Proxy</b><p class="text-xs text-slate-400">Brent/WTI proxy</p></div><span class="text-orange-500 font-bold">Takip</span></div>
-          <div class="grid grid-cols-[1fr_auto] gap-3"><div><b>CIF NWE Platts</b><p class="text-xs text-slate-400">Lisanslı veri</p></div><span class="red font-bold">API gerekli</span></div>
+          <a href="https://www.tcmb.gov.tr/wps/wcm/connect/en/tcmb+en/main+menu/core+functions/monetary+policy/central+bank+interest+rates" target="_blank" class="grid grid-cols-[1fr_auto] gap-3 border-b pb-2">
+            <span><b>TCMB Politika Faizi</b><p class="text-xs text-slate-400">1 hafta repo</p></span><b>37.00%</b>
+          </a>
+          <a href="https://www.tcmb.gov.tr/wps/wcm/connect/en/tcmb+en/main+menu/core+functions/monetary+policy/central+bank+interest+rates" target="_blank" class="grid grid-cols-[1fr_auto] gap-3 border-b pb-2">
+            <span><b>O/N Borç Verme</b><p class="text-xs text-slate-400">TCMB gecelik lending</p></span><b>40.00%</b>
+          </a>
+          <a href="https://www.tcmb.gov.tr/wps/wcm/connect/en/tcmb+en/main+menu/core+functions/monetary+policy/central+bank+interest+rates" target="_blank" class="grid grid-cols-[1fr_auto] gap-3 border-b pb-2">
+            <span><b>O/N Borç Alma</b><p class="text-xs text-slate-400">TCMB gecelik borrowing</p></span><b>35.50%</b>
+          </a>
+          <a href="https://data.tuik.gov.tr/en/press/58288" target="_blank" class="grid grid-cols-[1fr_auto] gap-3 border-b pb-2">
+            <span><b>TÜFE Yıllık</b><p class="text-xs text-slate-400">TÜİK CPI April 2026</p></span><b>32.37%</b>
+          </a>
+          <a href="https://data.tuik.gov.tr/en/press/58288" target="_blank" class="grid grid-cols-[1fr_auto] gap-3 border-b pb-2">
+            <span><b>TÜFE Aylık</b><p class="text-xs text-slate-400">TÜİK CPI April 2026</p></span><b>4.18%</b>
+          </a>
+          <a href="https://www.reuters.com/world/middle-east/turkish-monthly-inflation-surges-418-amid-war-fallout-2026-05-04/" target="_blank" class="grid grid-cols-[1fr_auto] gap-3">
+            <span><b>ÜFE Yıllık</b><p class="text-xs text-slate-400">Reuters / official data summary</p></span><b>28.59%</b>
+          </a>
         </div>
       </div>
 
@@ -141,18 +145,18 @@
           <div>
             <h2 class="text-xl font-extrabold mb-4">Günün Özeti – 5 Ana Başlık</h2>
             <div class="space-y-3 text-sm">
-              <p><span class="bg-blue-600 text-white rounded-full px-2 py-1 font-bold mr-2">1</span> Brent ve FX ekranı canlı izleniyor; yakıt maliyet etkisi takip edilmeli.</p>
-              <p><span class="bg-blue-600 text-white rounded-full px-2 py-1 font-bold mr-2">2</span> EUR/TRY ve USD/TRY hareketi açık pozisyon açısından kritik.</p>
-              <p><span class="bg-blue-600 text-white rounded-full px-2 py-1 font-bold mr-2">3</span> Middle East kaynaklı jeopolitik riskler bazı hava sahaları için izleniyor.</p>
-              <p><span class="bg-blue-600 text-white rounded-full px-2 py-1 font-bold mr-2">4</span> IATA ve sektör raporları demand/supply chain açısından takip edilmeli.</p>
-              <p><span class="bg-blue-600 text-white rounded-full px-2 py-1 font-bold mr-2">5</span> Lessor, insurance ve MRO haberleri operasyon-finans etkisi açısından izlenmeli.</p>
+              <a class="block hover:text-blue-700" href="https://www.reuters.com/world/middle-east/" target="_blank"><span class="bg-blue-600 text-white rounded-full px-2 py-1 font-bold mr-2">1</span> Middle East kaynaklı jeopolitik riskler hava sahası, sigorta ve operasyon planlaması açısından izlenmeli.</a>
+              <a class="block hover:text-blue-700" href="https://www.reuters.com/business/aerospace-defense/" target="_blank"><span class="bg-blue-600 text-white rounded-full px-2 py-1 font-bold mr-2">2</span> Airbus/Boeing teslimat ve tedarik zinciri haberleri kapasite planlaması açısından kritik kalmaya devam ediyor.</a>
+              <a class="block hover:text-blue-700" href="https://www.iata.org/en/publications/economics/" target="_blank"><span class="bg-blue-600 text-white rounded-full px-2 py-1 font-bold mr-2">3</span> IATA ekonomi raporları talep, kârlılık, yakıt ve kapasite görünümü açısından takip edilmeli.</a>
+              <a class="block hover:text-blue-700" href="https://www.iea.org/" target="_blank"><span class="bg-blue-600 text-white rounded-full px-2 py-1 font-bold mr-2">4</span> Brent ve enerji piyasası hareketi yakıt maliyeti ve hedge kararları açısından günlük izlenmeli.</a>
+              <a class="block hover:text-blue-700" href="https://www.aercap.com/investors/" target="_blank"><span class="bg-blue-600 text-white rounded-full px-2 py-1 font-bold mr-2">5</span> Aircraft leasing ve büyük lessor finansalları lease rate, arz-talep ve finansman koşulları için takip edilmeli.</a>
             </div>
           </div>
 
           <div class="rounded-2xl border bg-slate-50 p-4">
-            <h3 class="font-extrabold mb-3">CFO olarak bugün neye bakmalıyım?</h3>
+            <h3 class="font-extrabold mb-3">Bugün odaklanılması gerekenler</h3>
             <p class="mb-3">○ Yakıt trendi ve hedge seviyeleri</p>
-            <p class="mb-3">○ EUR/TRY hareketi ve kur riski</p>
+            <p class="mb-3">○ EUR/TRY ve USD/TRY hareketi</p>
             <p class="mb-3">○ Middle East operasyonel risk ve sigorta durumu</p>
             <p class="mb-3">○ Yaz sezonu kapasite ve talep görünümü</p>
             <p>○ Lessor ilişkileri ve ödeme/takvim gelişmeleri</p>
@@ -167,18 +171,18 @@
         </div>
 
         <div class="flex gap-2 overflow-auto text-sm font-bold mb-4">
-          <span class="bg-blue-600 text-white rounded-full px-4 py-2">Türkiye & Bölge</span>
-          <span class="bg-slate-100 rounded-full px-4 py-2">Dünya Havacılığı</span>
-          <span class="bg-slate-100 rounded-full px-4 py-2">Middle East & Risk</span>
-          <span class="bg-slate-100 rounded-full px-4 py-2">Fuel & Çevre</span>
+          <a href="https://investor.turkishairlines.com/" target="_blank" class="bg-blue-600 text-white rounded-full px-4 py-2">Türkiye & Bölge</a>
+          <a href="https://www.reuters.com/business/aerospace-defense/" target="_blank" class="bg-slate-100 rounded-full px-4 py-2">Dünya Havacılığı</a>
+          <a href="https://www.reuters.com/world/middle-east/" target="_blank" class="bg-slate-100 rounded-full px-4 py-2">Middle East & Risk</a>
+          <a href="https://www.iea.org/" target="_blank" class="bg-slate-100 rounded-full px-4 py-2">Fuel & Çevre</a>
         </div>
 
         <div class="text-sm">
-          <div class="grid grid-cols-[60px_1fr_auto] gap-3 border-t py-3"><span>07:15</span><span>THY yaz kapasitesi ve trafik görünümü takip ediliyor.</span><a href="https://investor.turkishairlines.com/" target="_blank">THY IR</a></div>
-          <div class="grid grid-cols-[60px_1fr_auto] gap-3 border-t py-3"><span>06:45</span><span>İstanbul Havalimanı ve DHMİ trafik verileri takipte.</span><a href="https://www.dhmi.gov.tr" target="_blank">DHMİ</a></div>
-          <div class="grid grid-cols-[60px_1fr_auto] gap-3 border-t py-3"><span>06:30</span><span>Pegasus yatırımcı duyuruları izleniyor.</span><a href="https://www.flypgs.com/yatirimci-iliskileri" target="_blank">Pegasus</a></div>
-          <div class="grid grid-cols-[60px_1fr_auto] gap-3 border-t py-3"><span>06:15</span><span>SunExpress Almanya/Türkiye kapasite haberleri takipte.</span><a href="https://www.sunexpress.com" target="_blank">SunExpress</a></div>
-          <div class="grid grid-cols-[60px_1fr_auto] gap-3 border-t py-3"><span>05:50</span><span>Sabiha Gökçen kapasite ve trafik gündemi izleniyor.</span><a href="https://www.sgairport.com" target="_blank">SAW</a></div>
+          <a href="https://investor.turkishairlines.com/" target="_blank" class="grid grid-cols-[60px_1fr_auto] gap-3 border-t py-3"><span>07:15</span><span>THY yatırımcı duyuruları, trafik verileri ve kapasite görünümü takip ediliyor.</span><span class="blue">THY IR</span></a>
+          <a href="https://www.dhmi.gov.tr" target="_blank" class="grid grid-cols-[60px_1fr_auto] gap-3 border-t py-3"><span>06:45</span><span>DHMİ ve havalimanı trafik verileri Türkiye operasyon görünümü için takipte.</span><span class="blue">DHMİ</span></a>
+          <a href="https://www.flypgs.com/yatirimci-iliskileri" target="_blank" class="grid grid-cols-[60px_1fr_auto] gap-3 border-t py-3"><span>06:30</span><span>Pegasus yatırımcı duyuruları ve trafik performansı izleniyor.</span><span class="blue">Pegasus</span></a>
+          <a href="https://www.sunexpress.com/en/company/media-center/press-releases/" target="_blank" class="grid grid-cols-[60px_1fr_auto] gap-3 border-t py-3"><span>06:15</span><span>SunExpress Almanya/Türkiye kapasite ve route haberleri takipte.</span><span class="blue">SunExpress</span></a>
+          <a href="https://www.sgairport.com/en/corporate-info/media-centre/press-releases" target="_blank" class="grid grid-cols-[60px_1fr_auto] gap-3 border-t py-3"><span>05:50</span><span>Sabiha Gökçen kapasite, trafik ve operasyon gündemi izleniyor.</span><span class="blue">SAW</span></a>
         </div>
       </div>
 
@@ -245,9 +249,9 @@
 
       <div class="card p-4">
         <h2 class="text-lg font-extrabold mb-3">📄 IATA & Sektör Raporları</h2>
-        <a href="https://www.iata.org/en/publications/economics/" target="_blank" class="flex justify-between border-b py-3"><b>IATA Economics Report</b><span class="text-slate-500">Bugün</span></a>
-        <a href="https://www.iata.org/en/publications/economics/" target="_blank" class="flex justify-between border-b py-3"><b>IATA Chart of the Week</b><span class="text-slate-500">Bu hafta</span></a>
-        <a href="https://www.iata.org/en/pressroom/" target="_blank" class="flex justify-between border-b py-3"><b>Global Passenger Demand</b><span class="text-slate-500">Güncel</span></a>
+        <a href="https://www.iata.org/en/publications/economics/" target="_blank" class="flex justify-between border-b py-3"><b>IATA Economics Report</b><span class="text-slate-500">Güncel</span></a>
+        <a href="https://www.iata.org/en/publications/economics/" target="_blank" class="flex justify-between border-b py-3"><b>IATA Chart of the Week</b><span class="text-slate-500">Haftalık</span></a>
+        <a href="https://www.iata.org/en/pressroom/" target="_blank" class="flex justify-between border-b py-3"><b>Global Passenger Demand</b><span class="text-slate-500">Basın</span></a>
         <a href="https://www.iata.org/en/publications/economics/" target="_blank" class="flex justify-between py-3"><b>Financial Monitor</b><span class="text-slate-500">Güncel</span></a>
       </div>
 
