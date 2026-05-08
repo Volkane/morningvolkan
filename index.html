@@ -13,264 +13,38 @@
     .red { color:#dc2626; }
     .blue { color:#2563eb; }
     .pill { border-radius:999px; padding:4px 10px; font-size:11px; font-weight:700; }
-    .spark { height:28px; width:80px; }
     a:hover { text-decoration:underline; }
   </style>
 </head>
 
 <body class="text-slate-900 p-3 md:p-5">
 
-  <div class="max-w-[1650px] mx-auto space-y-4">
+<div class="max-w-[1650px] mx-auto space-y-4">
 
-    <!-- TOP HEADER -->
-    <header class="navy text-white rounded-2xl p-5 shadow-2xl">
-      <div class="grid gap-5 xl:grid-cols-[1.4fr_1fr_2fr_auto] items-center">
+  <header class="navy text-white rounded-2xl p-5 shadow-2xl">
+    <div class="grid gap-5 xl:grid-cols-[1.2fr_1fr_2.2fr_auto] items-center">
 
-        <div class="flex items-center gap-4">
-          <div class="bg-white/10 rounded-2xl p-3 text-4xl">✈️</div>
-          <div>
-            <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">MORNING VOLKAN</h1>
-            <p class="text-blue-100 text-sm md:text-base">Airline Finance & Market Intelligence</p>
-          </div>
+      <div class="flex items-center gap-4">
+        <div class="bg-white/10 rounded-2xl p-3 text-4xl">✈️</div>
+        <div>
+          <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">MORNING VOLKAN</h1>
+          <p class="text-blue-100 text-sm md:text-base">Airline Finance & Market Intelligence</p>
         </div>
-
-        <div class="border-white/10 xl:border-l xl:pl-6">
-          <p class="font-bold">8 Mayıs 2026, Cuma</p>
-          <p class="text-xs text-blue-100">morningvolkan.vercel.app • 07:30 TSİ</p>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-          <div class="bg-white/5 border border-white/10 rounded-xl p-3">
-            <p class="text-xs text-blue-100 font-bold">EUR/USD</p>
-            <p class="text-2xl font-extrabold">1.1185</p>
-            <p class="green text-sm font-bold">+0.23% ⬈</p>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-xl p-3">
-            <p class="text-xs text-blue-100 font-bold">EUR/TRY</p>
-            <p class="text-2xl font-extrabold">43.59</p>
-            <p class="green text-sm font-bold">+0.45% ⬈</p>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-xl p-3">
-            <p class="text-xs text-blue-100 font-bold">BRENT</p>
-            <p class="text-2xl font-extrabold">64.21</p>
-            <p class="red text-sm font-bold">-0.35% ⬊</p>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-xl p-3">
-            <p class="text-xs text-blue-100 font-bold">JET FUEL</p>
-            <p class="text-2xl font-extrabold">701.25</p>
-            <p class="red text-sm font-bold">-0.40% ⬊</p>
-          </div>
-        </div>
-
-        <div class="flex gap-2 justify-start xl:justify-end">
-          <button class="bg-white/10 hover:bg-white/20 rounded-xl px-4 py-2 text-sm">↻ Yenile</button>
-          <button class="bg-white text-slate-950 rounded-xl px-4 py-2 text-sm font-bold">PDF</button>
-        </div>
-
       </div>
-    </header>
 
-    <!-- MAIN GRID -->
-    <main class="grid gap-4 xl:grid-cols-[360px_1fr_410px]">
+      <div class="border-white/10 xl:border-l xl:pl-6">
+        <p class="font-bold">Günlük CFO Brief</p>
+        <p class="text-xs text-blue-100">morningvolkan.vercel.app • Live Market</p>
+      </div>
 
-      <!-- LEFT -->
-      <section class="space-y-4">
-
-        <div class="card p-4">
-          <h2 class="text-lg font-extrabold mb-3">📊 Piyasa Göstergeleri</h2>
-          <div class="space-y-3 text-sm">
-            <div class="grid grid-cols-[1fr_auto_auto] gap-3 border-b pb-2">
-              <div><b>EUR/USD</b><p class="text-xs text-slate-400">TCMB / ECB</p></div><b>1.1185</b><span class="green font-bold">+0.23%</span>
-            </div>
-            <div class="grid grid-cols-[1fr_auto_auto] gap-3 border-b pb-2">
-              <div><b>GBP/USD</b><p class="text-xs text-slate-400">TCMB / ECB</p></div><b>1.3304</b><span class="green font-bold">+0.18%</span>
-            </div>
-            <div class="grid grid-cols-[1fr_auto_auto] gap-3 border-b pb-2">
-              <div><b>EUR/TRY</b><p class="text-xs text-slate-400">TCMB EVDS</p></div><b>43.59</b><span class="green font-bold">+0.45%</span>
-            </div>
-            <div class="grid grid-cols-[1fr_auto_auto] gap-3 border-b pb-2">
-              <div><b>USD/TRY</b><p class="text-xs text-slate-400">TCMB EVDS</p></div><b>38.98</b><span class="green font-bold">+0.34%</span>
-            </div>
-            <div class="grid grid-cols-[1fr_auto_auto] gap-3">
-              <div><b>DXY</b><p class="text-xs text-slate-400">FRED</p></div><b>104.32</b><span class="red font-bold">-0.21%</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card p-4">
-          <h2 class="text-lg font-extrabold mb-3">🏦 Türkiye Ekonomisi</h2>
-          <div class="space-y-3 text-sm">
-            <div class="grid grid-cols-[1fr_auto_auto] gap-3 border-b pb-2"><b>TCMB Politika Faizi</b><b>50.00%</b><span class="text-slate-500">50.00%</span></div>
-            <div class="grid grid-cols-[1fr_auto_auto] gap-3 border-b pb-2"><b>TÜFE Yıllık</b><b>37.86%</b><span class="text-slate-500">38.10%</span></div>
-            <div class="grid grid-cols-[1fr_auto_auto] gap-3 border-b pb-2"><b>ÜFE Yıllık</b><b>22.50%</b><span class="text-slate-500">23.50%</span></div>
-            <div class="grid grid-cols-[1fr_auto_auto] gap-3 border-b pb-2"><b>Gecelik Borç Verme</b><b>53.00%</b><span class="text-slate-500">53.00%</span></div>
-            <div class="grid grid-cols-[1fr_auto_auto] gap-3"><b>5Y CDS Türkiye</b><b>284</b><span class="text-slate-500">279</span></div>
-          </div>
-        </div>
-
-        <div class="card p-4">
-          <h2 class="text-lg font-extrabold mb-3">⛽ Emtia & Yakıt</h2>
-          <div class="space-y-3 text-sm">
-            <div class="grid grid-cols-[1fr_auto_auto] gap-3 border-b pb-2"><div><b>Brent Petrol</b><p class="text-xs text-slate-400">FRED / EIA</p></div><b>64.21</b><span class="red font-bold">-0.35%</span></div>
-            <div class="grid grid-cols-[1fr_auto_auto] gap-3 border-b pb-2"><div><b>WTI</b><p class="text-xs text-slate-400">FRED / EIA</p></div><b>61.04</b><span class="red font-bold">-0.46%</span></div>
-            <div class="grid grid-cols-[1fr_auto_auto] gap-3 border-b pb-2"><div><b>Jet Fuel Proxy</b><p class="text-xs text-slate-400">Public energy data</p></div><b>701.25</b><span class="red font-bold">-0.40%</span></div>
-            <div class="grid grid-cols-[1fr_auto_auto] gap-3 border-b pb-2"><div><b>CIF NWE Platts</b><p class="text-xs text-slate-400">Lisanslı veri</p></div><b>API</b><span class="red font-bold">Gerekli</span></div>
-            <div class="grid grid-cols-[1fr_auto_auto] gap-3"><div><b>Altın</b><p class="text-xs text-slate-400">Market data</p></div><b>3,184</b><span class="green font-bold">+0.15%</span></div>
-          </div>
-        </div>
-
-        <div class="card p-4">
-          <h2 class="text-sm font-extrabold mb-3 uppercase">Piyasa Trendi</h2>
-          <div class="grid grid-cols-4 gap-3 text-center text-xs font-bold">
-            <div><div class="h-8 bg-emerald-50 rounded text-emerald-600">╱╲╱╲</div>EUR/USD</div>
-            <div><div class="h-8 bg-emerald-50 rounded text-emerald-600">╱╲╱╲</div>BRENT</div>
-            <div><div class="h-8 bg-emerald-50 rounded text-emerald-600">╱╲╱╲</div>CIF NWE</div>
-            <div><div class="h-8 bg-rose-50 rounded text-rose-600">╲╱╲╱</div>EUR/TRY</div>
-          </div>
-          <p class="text-xs text-slate-500 mt-4">
-            Ücretsiz kaynaklar: TCMB EVDS, TÜİK, FRED, EIA, IATA public pages, official company news, RSS.
-          </p>
-        </div>
-
-      </section>
-
-      <!-- CENTER -->
-      <section class="space-y-4">
-
-        <div class="card p-5">
-          <div class="grid gap-5 lg:grid-cols-[1.2fr_.9fr]">
-            <div>
-              <h2 class="text-xl font-extrabold mb-4">Günün Özeti – 5 Ana Başlık</h2>
-              <div class="space-y-3 text-sm">
-                <p><span class="bg-blue-600 text-white rounded-full px-2 py-1 font-bold mr-2">1</span> Brent petrol yatay seyrini korurken jet yakıt fiyatları hafif geriledi.</p>
-                <p><span class="bg-blue-600 text-white rounded-full px-2 py-1 font-bold mr-2">2</span> EUR/TRY yukarı yönlü; TL’de zayıf seyir devam ediyor.</p>
-                <p><span class="bg-blue-600 text-white rounded-full px-2 py-1 font-bold mr-2">3</span> Middle East kaynaklı jeopolitik riskler bazı hava sahaları için izleniyor.</p>
-                <p><span class="bg-blue-600 text-white rounded-full px-2 py-1 font-bold mr-2">4</span> IATA, havayolu kârlılığı ve supply chain raporunda yeni notlar yayımladı.</p>
-                <p><span class="bg-blue-600 text-white rounded-full px-2 py-1 font-bold mr-2">5</span> Airbus ve motor tedarik zincirinde teslimat gecikmeleri takip ediliyor.</p>
-              </div>
-            </div>
-
-            <div class="rounded-2xl border bg-slate-50 p-4">
-              <h3 class="font-extrabold mb-3">CFO olarak bugün neye bakmalıyım?</h3>
-              <p class="mb-3">○ Yakıt trendi ve hedge seviyeleri</p>
-              <p class="mb-3">○ EUR/TRY hareketi ve kur riski</p>
-              <p class="mb-3">○ Middle East operasyonel risk ve sigorta durumu</p>
-              <p class="mb-3">○ Yaz sezonu kapasite ve talep görünümü</p>
-              <p>○ Lessor ilişkileri ve ödeme/takvim gelişmeleri</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card p-5">
-          <div class="flex justify-between items-center mb-4">
-            <h2 class="text-xl font-extrabold">📰 Sektör Haberleri</h2>
-            <button class="border rounded-xl px-3 py-2 text-sm">Filtre</button>
-          </div>
-
-          <div class="flex gap-2 overflow-auto text-sm font-bold mb-4">
-            <span class="bg-blue-600 text-white rounded-full px-4 py-2">Türkiye & Bölge</span>
-            <span class="bg-slate-100 rounded-full px-4 py-2">Dünya Havacılığı</span>
-            <span class="bg-slate-100 rounded-full px-4 py-2">Middle East & Risk</span>
-            <span class="bg-slate-100 rounded-full px-4 py-2">Fuel & Çevre</span>
-          </div>
-
-          <div class="text-sm">
-            <div class="grid grid-cols-[60px_1fr_auto] gap-3 border-t py-3"><span>07:15</span><span>THY yaz kapasitesini artırmayı planlıyor.</span><a href="https://www.thy.com" target="_blank">Kaynak</a></div>
-            <div class="grid grid-cols-[60px_1fr_auto] gap-3 border-t py-3"><span>06:45</span><span>İstanbul Havalimanı yolcu sayısında güçlü seyir bildirdi.</span><a href="https://www.dhmi.gov.tr" target="_blank">DHMI</a></div>
-            <div class="grid grid-cols-[60px_1fr_auto] gap-3 border-t py-3"><span>06:30</span><span>Pegasus trafik verileri izlendi.</span><a href="https://www.flypgs.com" target="_blank">Pegasus</a></div>
-            <div class="grid grid-cols-[60px_1fr_auto] gap-3 border-t py-3"><span>06:15</span><span>SunExpress Almanya çıkışlı yeni hatları duyurdu.</span><a href="https://www.sunexpress.com" target="_blank">SunExpress</a></div>
-            <div class="grid grid-cols-[60px_1fr_auto] gap-3 border-t py-3"><span>05:50</span><span>Sabiha Gökçen kapasite artırımı için yeni plan paylaştı.</span><a href="https://www.sgairport.com" target="_blank">Kaynak</a></div>
-          </div>
-        </div>
-
-        <div class="card p-5">
-          <div class="flex justify-between items-center mb-4">
-            <h2 class="text-xl font-extrabold">Detaylı Haber Akışı</h2>
-            <input placeholder="Ara..." class="border rounded-xl px-3 py-2 text-sm" />
-          </div>
-
-          <div class="overflow-auto rounded-xl border">
-            <table class="w-full text-sm">
-              <thead class="bg-slate-100 text-left">
-                <tr>
-                  <th class="p-3">Saat</th>
-                  <th>Kategori</th>
-                  <th>Haber</th>
-                  <th>Kaynak</th>
-                  <th>Önem</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="border-t"><td class="p-3">07:20</td><td class="blue font-bold">Dünya Havacılığı</td><td><a href="https://www.reuters.com/business/aerospace-defense/" target="_blank">Airbus teslimat hedeflerini korudu.</a></td><td>Reuters</td><td class="red font-bold">Yüksek</td></tr>
-                <tr class="border-t"><td class="p-3">07:10</td><td class="green font-bold">Fuel & Çevre</td><td><a href="https://www.iea.org/" target="_blank">IEA petrol talebi değerlendirmesi.</a></td><td>IEA</td><td class="text-orange-500 font-bold">Orta</td></tr>
-                <tr class="border-t"><td class="p-3">07:00</td><td class="red font-bold">Middle East</td><td><a href="https://www.reuters.com/world/middle-east/" target="_blank">Bölgesel gerilim nedeniyle risk izleme.</a></td><td>Reuters</td><td class="red font-bold">Yüksek</td></tr>
-                <tr class="border-t"><td class="p-3">06:55</td><td class="blue font-bold">Lessor</td><td><a href="https://www.aercap.com/investors/" target="_blank">Lessor finansalları takip ediliyor.</a></td><td>AerCap</td><td class="text-orange-500 font-bold">Orta</td></tr>
-                <tr class="border-t"><td class="p-3">06:30</td><td class="red font-bold">War Risk</td><td><a href="https://www.iata.org/en/programs/safety/" target="_blank">War risk primlerinde oynaklık sürüyor.</a></td><td>IATA</td><td class="text-orange-500 font-bold">Orta</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-      </section>
-
-      <!-- RIGHT -->
-      <section class="space-y-4">
-
-        <div class="card p-4">
-          <h2 class="text-lg font-extrabold mb-3">📌 Öne Çıkan İzleme Listesi</h2>
-
-          <a href="https://www.avolon.aero/news" target="_blank" class="block border rounded-2xl p-3 mb-3 hover:shadow-md">
-            <div class="flex justify-between"><b>Lessor Haberleri</b><span class="pill bg-emerald-100 text-emerald-700">YENİ</span></div>
-            <p class="text-sm text-slate-600 mt-1">Avolon, AerCap, SMBC, AerDragon ve ilişkili lessor gündemi.</p>
-          </a>
-
-          <a href="https://www.iata.org/en/programs/safety/" target="_blank" class="block border rounded-2xl p-3 mb-3 hover:shadow-md">
-            <div class="flex justify-between"><b>Insurance / War Risk</b><span class="pill bg-orange-100 text-orange-700">DİKKAT</span></div>
-            <p class="text-sm text-slate-600 mt-1">MED, JED, BGW, DIA, EBL, IKA ve bölgesel prim etkileri.</p>
-          </a>
-
-          <a href="https://www.reuters.com/world/middle-east/" target="_blank" class="block border rounded-2xl p-3 mb-3 hover:shadow-md">
-            <div class="flex justify-between"><b>Middle East Gelişmeleri</b><span class="pill bg-orange-100 text-orange-700">DİKKAT</span></div>
-            <p class="text-sm text-slate-600 mt-1">Hava sahası, savaş riski, operasyonel kısıtlar ve sigorta etkisi.</p>
-          </a>
-
-          <a href="https://www.airfinancejournal.com/" target="_blank" class="block border rounded-2xl p-3 mb-3 hover:shadow-md">
-            <div class="flex justify-between"><b>Aircraft Leasing Piyasası</b><span class="pill bg-emerald-100 text-emerald-700">YENİ</span></div>
-            <p class="text-sm text-slate-600 mt-1">A320ceo lease rate, supply-demand ve lessor appetite.</p>
-          </a>
-
-          <a href="https://aviationweek.com/" target="_blank" class="block border rounded-2xl p-3 hover:shadow-md">
-            <div class="flex justify-between"><b>MRO & Tedarik Zinciri</b><span class="pill bg-orange-100 text-orange-700">İZLE</span></div>
-            <p class="text-sm text-slate-600 mt-1">CFM/IAE motor, parça, shop visit ve teslimat gecikmeleri.</p>
-          </a>
-        </div>
-
-        <div class="card p-4">
-          <h2 class="text-lg font-extrabold mb-3">📄 IATA & Sektör Raporları</h2>
-          <a href="https://www.iata.org/en/publications/economics/" target="_blank" class="flex justify-between border-b py-3"><b>IATA Economics Report</b><span class="text-slate-500">Bugün</span></a>
-          <a href="https://www.iata.org/en/publications/economics/" target="_blank" class="flex justify-between border-b py-3"><b>IATA Chart of the Week</b><span class="text-slate-500">Bu hafta</span></a>
-          <a href="https://www.iata.org/en/pressroom/" target="_blank" class="flex justify-between border-b py-3"><b>Global Passenger Demand</b><span class="text-slate-500">Güncel</span></a>
-          <a href="https://www.iata.org/en/publications/economics/" target="_blank" class="flex justify-between py-3"><b>Financial Monitor</b><span class="text-slate-500">Güncel</span></a>
-        </div>
-
-        <div class="card p-5 bg-emerald-50 border-emerald-200">
-          <h2 class="text-lg font-extrabold text-emerald-700 mb-4">✅ Günlük Aksiyon Notu</h2>
-          <p class="mb-3">✓ EUR/TRY yukarı; hedge ve açık pozisyon tekrar kontrol edilmeli.</p>
-          <p class="mb-3">✓ Jet fuel hafif geriledi ancak Brent ve CIF NWE izlenmeli.</p>
-          <p class="mb-3">✓ Middle East riskleri için MED/JED/BGW/DIA uçuşları takipte.</p>
-          <p class="mb-3">✓ IATA raporları supply chain açısından gözden geçirilmeli.</p>
-          <p><b>Bugün:</b> haftalık yakıt raporu ve kur pozisyonları kontrol edilmeli.</p>
-        </div>
-
-      </section>
-
-    </main>
-
-    <footer class="text-center text-xs text-slate-500 py-5">
-      morningvolkan.vercel.app • Airline Finance & Market Intelligence • Bu sayfa bilgilendirme amaçlıdır. Yatırım tavsiyesi değildir.
-    </footer>
-
-  </div>
-
-</body>
-</html>
+      <div class="rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+        <div class="tradingview-widget-container">
+          <div id="tradingview_market_overview"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+          {
+            "colorTheme": "dark",
+            "dateRange": "12M",
+            "showChart": true,
+            "locale": "tr",
+            "isTransparent": true,
+            "showSymbolLogo": true
