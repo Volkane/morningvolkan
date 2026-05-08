@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Morning Volkan</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body{
+      background:#f1f5f9;
+      font-family:Arial;
+      margin:0;
+      padding:20px;
+    }
+
+    .card{
+      background:white;
+      border-radius:20px;
+      padding:20px;
+      margin-bottom:20px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .top{
+      background:linear-gradient(to right,#020617,#172554,#020617);
+      color:white;
+    }
+
+    .grid{
+      display:grid;
+      gap:20px;
+    }
+
+    @media(min-width:1200px){
+      .grid-3{
+        grid-template-columns:300px 1fr 350px;
+      }
+    }
+
+    a{
+      color:#2563eb;
+      text-decoration:none;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="card top">
+  <h1 style="margin:0;font-size:40px;">
+    MORNING VOLKAN
+  </h1>
+
+  <p>
+    Airline Finance & Market Intelligence
+  </p>
+
+  <p>
+    Live Dashboard
+  </p>
+</div>
+
+<div class="grid grid-3">
+
+  <div>
+
+    <div class="card">
+      <h2>Market</h2>
+
+      <p>EUR/USD : 1.11</p>
+      <p>EUR/TRY : 43.59</p>
+      <p>USD/TRY : 38.98</p>
+      <p>Brent : 64.21</p>
+    </div>
+
+    <div class="card">
+      <h2>Türkiye</h2>
+
+      <p>Faiz : %50</p>
+      <p>Enflasyon : %37</p>
+      <p>CDS : 284</p>
+    </div>
+
+  </div>
+
+  <div>
+
+    <div class="card">
+      <h2>Top Headlines</h2>
+
+      <p>
+        <a href="https://www.reuters.com/world/middle-east/" target="_blank">
+          Middle East risk developments
+        </a>
+      </p>
+
+      <p>
+        <a href="https://www.iata.org/" target="_blank">
+          IATA industry updates
+        </a>
+      </p>
+
+      <p>
+        <a href="https://www.aercap.com/investors/" target="_blank">
+          Lessor market news
+        </a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>CFO Focus</h2>
+
+      <ul>
+        <li>Fuel risk</li>
+        <li>EURTRY volatility</li>
+        <li>Middle East operations</li>
+        <li>Lessor planning</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div>
+
+    <div class="card">
+      <h2>IATA Reports</h2>
+
+      <p>
+        <a href="https://www.iata.org/en/publications/economics/" target="_blank">
+          Economics Reports
+        </a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Watchlist</h2>
+
+      <p>War Risk</p>
+      <p>Fuel</p>
+      <p>Insurance</p>
+      <p>A320 Market</p>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
